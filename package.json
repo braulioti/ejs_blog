@@ -1,0 +1,24 @@
+{
+  "name": "ejs_blog",
+  "version": "0.1.0",
+  "description": "EJS Blog",
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ejs": "^3.0.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "pg": "7.15.0",
+    "sequelize": "5.1.0",
+    "sequelize-typescript": "1.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "ejs-ts": "^1.0.0",
+    "ts-node": "5.0.1",
+    "typescript": "3.7.5"
+  }
+}
