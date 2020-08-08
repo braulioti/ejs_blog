@@ -4,6 +4,7 @@
 [![Twitter: @braulio_info](https://img.shields.io/badge/contact-@braulio_info-blue.svg?style=flat)](https://twitter.com/braulio_info)
 [![GPL Badge](https://upload.wikimedia.org/wikipedia/commons/8/86/GPL_v3_Blue_Badge.svg)](https://www.gnu.org/licenses/gpl.html)
 [![NodeJS](https://img.shields.io/node/v/next/latest.svg)](https://nodejs.org)
+[![Build Status](https://travis-ci.com/braulioti/ejs_blog.svg?branch=dev)](https://travis-ci.com/braulioti/ejs_blog)
 
 EJS Blog is a tool created in Node.js of Content Management System. With this tool it is possible to create your blog in
 a simpler way with more optimized code than the current tools
