@@ -4,5 +4,6 @@ services:
 before_install:
   - npm i -g typescript
   - psql -c 'create database travis_ci_test;' -U postgres
+  - apt-get install -y java-1.8.0-openjdk
 install:
   - tsc
