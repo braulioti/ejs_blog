@@ -1,17 +1,17 @@
-import * as path from 'path';
+import {environment} from './common/environments';
+import {Server} from './server/server';
+import {baseRouter} from './routers/base.router';
 
-const express = require('express');
-const app = express();
+const server = new Server();
 
-app.use('/assets', express.static(`${__dirname}/../views/default/assets`));
+server.setEnvironment(environment);
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/../views/default'));
-
-app.get('/', function(req, res) {
-  res.render('index.ejs')
-});
-
-app.listen(3000, function() {
-  console.log('Blog.js listening on port 3000!');
+server.bootstrap([
+  baseRouter
+]).then(server => {
+  console.log('Server is listening on port ' + server.environment.server.port);
+}).catch(error => {
+  console.log('Server failed to start');
+  console.error(error);
+  process.exit(1);
 });
