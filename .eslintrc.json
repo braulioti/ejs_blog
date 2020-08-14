@@ -16,8 +16,8 @@
     ],
     "rules": {
         "no-console": "off",
-        "value-list-comma-space-after": "always-single-line",
-        "value-list-comma-space-before": "never",
+        "value-list-comma-space-after": "off",
+        "value-list-comma-space-before": "off",
         "indent": [true, "spaces", 4]
     }
 }
