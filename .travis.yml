@@ -4,6 +4,6 @@ services:
 before_install:
   - npm i -g typescript
   - psql -c 'create database travis_ci_test;' -U postgres
-install:
   - npm install
+install:
   - tsc
