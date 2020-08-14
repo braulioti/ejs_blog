@@ -15,10 +15,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "off"
-    },
-    "trailing-comma": [
-        false
-    ],
-    "indent": [true, "spaces", 4]
+        "no-console": "off",
+        "trailing-comma": [ false ],
+        "indent": [true, "spaces", 4]
+    }
 }
