@@ -16,5 +16,9 @@
     ],
     "rules": {
         "no-console": "off"
-    }
+    },
+    "trailing-comma": [
+        false
+    ],
+    "indent": [true, "spaces", 4]
 }
