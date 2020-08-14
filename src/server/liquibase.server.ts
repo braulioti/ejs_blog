@@ -22,7 +22,7 @@ export class LiquibaseServer {
     }
 
     runPublic(): Promise<any> {
-        let liquibase =  new Liquibase(this.params);
+        const liquibase = new Liquibase(this.params);
 
         return new Promise( (resolve, reject) =>
             liquibase.run().then((data) => {

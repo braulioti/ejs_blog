@@ -15,9 +15,9 @@ Stay up to date with the latest release and announcements on Twitter:
 
 ## Dependencies
 
-  - NodeJS
-  - PostgreSQL Database
-  - NPM
+- NodeJS
+- PostgreSQL Database
+- NPM
   
 ## Quickstart
 
@@ -31,9 +31,9 @@ Releases will be numbered with the following format:
 
 And constructed with the following guidelines:
 
-  - Breaking backward compatibility bumps the major (and resets the minor and patch)
-  - New additions, including new icons, without breaking backward compatibility bumps the minor (and resets the patch)
-  - Bug fixes and misc changes bumps the patch
+- Breaking backward compatibility bumps the major (and resets the minor and patch)
+- New additions, including new icons, without breaking backward compatibility bumps the minor (and resets the patch)
+- Bug fixes and misc changes bumps the patch
 
 For more information on SemVer, please visit [SemVer](http://semver.org).
 
@@ -41,15 +41,15 @@ For more information on SemVer, please visit [SemVer](http://semver.org).
 
 You can contribute to the development of this project in the following ways:
 
-  - Reporting on Issues any error or improvement for the project
-  - Review the code and ask for changes if it's interesting
-  - Translate language files for other languages
-  - Fixing bugs or making code improvements (use `npm link`)
-  - Making donations on the official website
+- Reporting on Issues any error or improvement for the project
+- Review the code and ask for changes if it's interesting
+- Translate language files for other languages
+- Fixing bugs or making code improvements (use `npm link`)
+- Making donations on the official website
 
 ## Author
 
-  - Email: braulio@braulioti.com.br
-  - Twitter: [@braulio_info](http://twitter.com/braulio_info)
-  - GitHub: [braulioti](https://github.com/braulioti)
-  - Website: [brau.io](https://brau.io)
+- Email: braulio@braulioti.com.br
+- Twitter: [@braulio_info](http://twitter.com/braulio_info)
+- GitHub: [braulioti](https://github.com/braulioti)
+- Website: [brau.io](https://brau.io)

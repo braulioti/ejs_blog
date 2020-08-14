@@ -15,8 +15,7 @@ export class Server {
     runLiquibase(): Promise<any> {
         console.log('Running Liquibase...');
 
-        let server: LiquibaseServer;
-        server = new LiquibaseServer(this.environment);
+        const server: LiquibaseServer = new LiquibaseServer(this.environment);
 
         return new Promise( (resolve, reject) =>
             server.runLiquibase().then(() => {
@@ -30,12 +29,14 @@ export class Server {
     initRoutes(routers: Router[]): Promise<any> {
         return new Promise((resolve, reject) => {
             try {
-                this.application.use('/assets', express.static(`${__dirname}/../../views/default/assets`));
+                this.application.use('/assets',
+                    express.static(`${__dirname}/../../views/default/assets`));
                 this.application.set('view engine', 'ejs');
-                this.application.set('views', path.join(__dirname, '/../../views/default'));
+                this.application.set('views', path.join(__dirname,
+                    '/../../views/default'));
 
                 // routes
-                for (let router of routers) {
+                for (const router of routers) {
                     router.applyRoutes(this.application);
                 }
 
