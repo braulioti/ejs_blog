@@ -18,6 +18,6 @@
         "no-console": "off",
         "value-list-comma-space-after": "off",
         "value-list-comma-space-before": "off",
-        "indent": [true, "spaces", 4]
+        "indent-size": 4
     }
 }
