@@ -17,6 +17,6 @@
     "rules": {
         "no-console": "off"
     },
-    "no-trailing-spaces": "ignore",
+    "no-comma-dangle": "off",
     "indent": ["error", 4]
 }
