@@ -1,15 +1,50 @@
 import {Router} from '../common/router';
 import {LiquibaseServer} from './liquibase.server';
 import * as path from 'path';
+import {Sequelize} from 'sequelize-typescript';
 const express = require('express');
 const app = express();
 
 export class Server {
     environment: any;
     application: any = app;
+    sequelize: Sequelize;
 
     setEnvironment(environment: any) {
         this.environment = environment;
+    }
+
+    initializeDb(): Promise<any> {
+        return new Promise(async (resolve, reject) => {
+            try {
+                this.sequelize = new Sequelize({
+                    database: this.environment.db.database,
+                    dialect: 'postgres',
+                    username: this.environment.db.user,
+                    password: this.environment.db.password,
+                    host: this.environment.db.host,
+                    port: this.environment.db.port,
+                    //logging: console.log,
+                    logging: false,
+                    storage: ':memory:',
+                    modelPaths: [__dirname + '/models/public/*.model.ts'],
+                    define: {
+                        timestamps: false,
+                        schema: 'public'
+                    },
+                    dialectOptions: {
+                        useUTC: false
+                    },
+                    timezone: '-03:00'
+                });
+
+                this.sequelize.addModels([]);
+
+                resolve(this.sequelize);
+            } catch(e) {
+                reject(e);
+            }
+        });
     }
 
     runLiquibase(): Promise<any> {
@@ -37,7 +72,7 @@ export class Server {
 
                 // routes
                 for (const router of routers) {
-                    router.applyRoutes(this.application);
+                    router.applyRoutes(this.application, this.sequelize);
                 }
 
                 this.application.listen(this.environment.server.port, () => {
@@ -50,8 +85,10 @@ export class Server {
     }
 
     bootstrap(routers: Router[] = []): Promise<Server> {
-        return this.runLiquibase().then(() =>
-            this.initRoutes(routers).then(() => this)
+        return this.initializeDb().then(() =>
+            this.runLiquibase().then(() =>
+                this.initRoutes(routers).then(() => this)
+            )
         );
     }
 }

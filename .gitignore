@@ -1,5 +1,6 @@
 #ItelliJ Directory
 .idea
+*.log
 
 # Generated Node Files
 dist
