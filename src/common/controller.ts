@@ -10,6 +10,6 @@ export abstract class Controller {
     }
 
     render(req, res, viewFile: string, options) {
-        res.render(viewFile)
+        res.render(viewFile, options);
     }
 }
