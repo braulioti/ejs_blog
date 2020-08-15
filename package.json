@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "EJS Blog",
   "main": "main.js",
+  "scripts": {
+    "test": "./test.sh"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

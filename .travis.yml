@@ -5,3 +5,4 @@ before_install:
   - npm i -g typescript
   - psql -c 'create database travis_ci_test;' -U postgres
   - npm install
+  - chmod 777 test.sh
